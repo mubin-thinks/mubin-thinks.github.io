@@ -1,6 +1,7 @@
 {
   "version": "5",
   "specifiers": {
+    "npm:@lucide/astro@^1.35.0": "1.35.0_astro@7.2.9__@emnapi+core@1.11.1__@emnapi+runtime@1.11.3",
     "npm:@tailwindcss/vite@^4.3.3": "4.3.3_vite@8.2.2__esbuild@0.28.2",
     "npm:astro@^7.2.9": "7.2.9_@emnapi+core@1.11.1_@emnapi+runtime@1.11.3",
     "npm:tailwindcss@^4.3.3": "4.3.3"
@@ -549,6 +550,12 @@
       "dependencies": [
         "@jridgewell/resolve-uri",
         "@jridgewell/sourcemap-codec"
+      ]
+    },
+    "@lucide/astro@1.35.0_astro@7.2.9__@emnapi+core@1.11.1__@emnapi+runtime@1.11.3": {
+      "integrity": "sha512-Oa4WnL3tGuuANr0hAs32x0uo7qAXrI9pXQfPer075zX6EB5oZo/de0yOx74wdBJ2hXeANjWDe1l8erfl3jt3Nw==",
+      "dependencies": [
+        "astro"
       ]
     },
     "@napi-rs/wasm-runtime@1.2.3_@emnapi+core@1.11.1_@emnapi+runtime@1.11.1": {
@@ -1891,6 +1898,7 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
+        "npm:@lucide/astro@^1.35.0",
         "npm:@tailwindcss/vite@^4.3.3",
         "npm:astro@^7.2.9",
         "npm:tailwindcss@^4.3.3"

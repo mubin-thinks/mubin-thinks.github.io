@@ -1,21 +1,35 @@
 ---
+import HeaderItem from "../components/HeaderItem.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import MainView from "../layouts/MainView.astro";
+import { NotebookTabs, Feather, } from "@lucide/astro";
 ---
 
 <BaseLayout>
-    <div class="flex flex-inital justify-center mt-8">
+    <div class="flex flex-inital justify-center mt-32">
         <MainView>
-            <div class="flex justify-between border-3 px-2 py-1 border-stone-700">
-                <div
-                    class="font-display text-bold text-2xl"
-                >
-                    mubin-thinks
-                </div>
-                <div>
-                    <img src="/GithubLogo.svg" class="w-(--text-3xl)"/>
+            <div class="w-full flex justify-between border-3 border-stone-700">
+                <div class="font-display text-bold text-2xl pl-2">mubin-thinks</div>
+                <div class="flex">
+                    <HeaderItem>
+                        <p class="font-display text-xl underline decoration-2">about me</p>
+                    </HeaderItem>
+                    <HeaderItem><Feather /></HeaderItem>
+                    <HeaderItem><NotebookTabs /></HeaderItem>
+                    <HeaderItem>
+                        <img src="/GithubLogo.svg" class="w-(--text-2xl)" />
+                    </HeaderItem>
                 </div>
             </div>
+            <p class="mt-2 font-display text-lg text-justify">
+                Hi, I'm hobbiest low-level software developer and beginner graphics
+                programmer. I am also passionate about Competitive Programming &amp;
+                Programming Contests. I also have a lite taste on Web Development.
+                Learn more{" "}
+                <a class="underline decoration-2" href="">
+                    about me
+                </a>.
+            </p>
         </MainView>
     </div>
 </BaseLayout>
