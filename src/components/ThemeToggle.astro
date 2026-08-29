@@ -1,0 +1,36 @@
+---
+import {
+    Sun,
+    Moon
+} from "@lucide/astro";
+
+interface Props {
+    class: string,
+}
+const {
+    class: className,
+} = Astro.props;
+---
+
+<button id="themeToggle" class:list={["cursor-pointer border-3", className]}>
+    <Sun class="block dark:hidden text-black" />
+    <Moon class="hidden dark:block text-white"/>
+</button>
+
+<script is:inline>
+    const theme = (function () {
+        const preferredTheme = localStorage?.getItem("theme") ?? "";
+        if (["dark", "light"].includes(preferredTheme)) return preferredTheme;
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark";
+        return "light";
+    })();
+    if (theme === "light") document.documentElement.classList.remove("dark");
+    else document.documentElement.classList.add("dark");
+    window.localStorage.setItem("theme", theme);
+    function handleToggle() {
+        const elem = document.documentElement;
+        elem.classList.toggle("dark");
+        localStorage.setItem("theme", elem.classList.contains("dark") ? "dark" : "light");
+    }
+    document.getElementById("themeToggle")?.addEventListener("click", handleToggle);
+</script>

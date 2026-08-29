@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
     --color-off-white: #efeee5;
-
+    --color-off-black: #191609;
     --font-display: var(--font-gentium-book-plus);
     --font-mono: var(--font-courier-prime);
+    --breakpoint-2sm: 32rem;
 }

@@ -1,2 +1,16 @@
+---
+interface Props {
+    href: string,
+    newTab?: boolean,
+}
+const {
+    href,
+    newTab = false,
+} = Astro.props;
+---
 
-<button class="px-2 border-l-3 flex items-center"><slot /></button>
+<button class="px-2 border-l-3 flex items-center">
+    <a href={href} target={(newTab) ? "_blank" : "_self"}>
+        <slot />
+    </a>
+</button>
