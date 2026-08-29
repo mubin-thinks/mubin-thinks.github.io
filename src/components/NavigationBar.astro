@@ -1,0 +1,40 @@
+---
+import {
+    CodeXml,
+    Feather,
+} from "@lucide/astro";
+import HeaderItem from "./HeaderItem.astro"
+import ThemeToggle from "./ThemeToggle.astro"
+---
+
+<div class="w-full flex justify-end mb-1">
+    <ThemeToggle class="px-2 py-[0.25rem]"/>
+</div>
+<div class="w-full flex flex-col 2sm:flex-row 2sm:border-3 justify-between">
+    <div
+        class="
+            font-display text-bold text-2xl
+            pl-2
+            border-3 2sm:border-none"
+    ><a href="/">mubin-thinks</a></div>
+    <div
+        class="
+            flex justify-end
+            border-l-3 border-r-3 border-b-3 2sm:border-none
+        "
+    >
+        <HeaderItem href="/about-me">
+            <p
+                class="
+                    font-display text-xl
+                    underline decoration-2 dark:decoration-1
+                "
+            >about me</p>
+        </HeaderItem>
+        <HeaderItem href="/writings"><Feather /></HeaderItem>
+        <HeaderItem href="/projects"><CodeXml /></HeaderItem>
+        <HeaderItem href="https://github.com/mubin-thinks" newTab>
+            <img src="/GithubLogo.svg" class="w-(--text-2xl) dark:invert" />
+        </HeaderItem>
+    </div>
+</div>
