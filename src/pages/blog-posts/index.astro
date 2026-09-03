@@ -1,5 +1,6 @@
 ---
 import NavigationBar from "../../components/NavigationBar.astro";
+import Chapter from "../../components/writing/Chapter.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import MainView from "../../layouts/MainView.astro";
 ---
@@ -8,8 +9,8 @@ import MainView from "../../layouts/MainView.astro";
     <div class="flex flex-inital justify-center">
         <MainView>
             <NavigationBar />
-            <h1 class="text-4xl mt-8">My Blog Posts</h1>
-            <p class="font-mono text-lg mt-4">Sorry, here's nothing to read.</p>
+            <Chapter>My Blog Posts</Chapter>
+            <p class="font-mono text-lg">Sorry, here's nothing to read.</p>
         </MainView>
     </div>
 </BaseLayout>

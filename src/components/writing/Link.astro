@@ -1,0 +1,17 @@
+---
+import { ExternalLink } from '@lucide/astro';
+interface Props {
+    external?: boolean;
+    url: string;
+    anchorText?: string;
+};
+const {
+    external = false,
+    url,
+    anchorText,
+} = Astro.props;
+---
+
+<a class="underline" href={url} target={(external) ? "_blank" : "_self"}>
+    {(anchorText) ? anchorText : url} {external && <ExternalLink class="w-[1em] inline"/>}
+</a>

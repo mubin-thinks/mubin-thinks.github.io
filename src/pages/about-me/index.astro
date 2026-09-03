@@ -1,5 +1,7 @@
 ---
 import NavigationBar from "../../components/NavigationBar.astro";
+import Chapter from "../../components/writing/Chapter.astro";
+import Paragraph from "../../components/writing/Paragraph.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import MainView from "../../layouts/MainView.astro";
 ---
@@ -8,41 +10,34 @@ import MainView from "../../layouts/MainView.astro";
     <div class="flex flex-inital justify-center">
         <MainView>
             <NavigationBar />
-            <h1 class="text-4xl mt-8">About Me</h1>
-            <p class="text-lg">Hi, I am Mubin Muhammad(screen name,{" "}
-            <span class="italic">mubin-thinks</span>),</p>
-            <p class="text-lg paragraph text-justify">
+            <Chapter>About Me</Chapter>
+            <Paragraph>
+                Hi, I am Mubin Muhammad(screen name, <i>mubin-thinks</i>),
+            </Paragraph>
+            <Paragraph>
                 I'm currently a high-school student with interest in Software
                 Engineering/Development, I have a good grasp on The C Programming Language
                 and basics of C++. In the past, I had interest in Graphics Programming and
                 learned the basics of OpenGL, with which I have created a small Game &
                 Image Processor in C++.
-            </p>
-            <br>
-            <p class="text-lg paragraph">
+            </Paragraph>
+            <Paragraph>
                 Apart from working on small projects, I focus on Competitve Programming &
                 Participating in Contests. Though I'm currently below-average in this
                 category and thus taking it more seriously.
-            </p>
-            <br>
-            <p class="text-lg paragraph">
+            </Paragraph>
+            <Paragraph>
                 I also look into web-development technologies. Though, this side rapidly
-                changes in a short time, I have a few that I like, namely SolidJS & Astro.
-                Because they are one of the lightweight and fast UI Library & Framework
+                changes in a short time, I have a few that I like, namely SolidJS & Astro
+                because they are one of the lightweight and fast UI Library & Framework
                 respectively. I also appreciate React, Preact, Alpine.js, Svelte & more.
-            </p>
-            <h1 class="text-4xl mt-8">My Current Task</h1>
-            <p class="text-lg inline">
+            </Paragraph>
+
+            <Chapter>My Current Task</Chapter>
+            <Paragraph>
                 At the time of writing, my focus is primarily on Competitive Programming
                 and the upcoming IOI(International Olympiad in Informatics) 2027.
-            </p>
+            </Paragraph>
         </MainView>
     </div>
 </BaseLayout>
-
-<style>
-    .paragraph {
-        display: inline;
-        margin-left: 3rem;
-    }
-</style>

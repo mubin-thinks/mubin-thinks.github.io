@@ -16,8 +16,9 @@ export default defineConfig({
     },
     {
       provider: fontProviders.google(),
-      name: "Courier Prime",
-      cssVariable: "--font-courier-prime",
+      name: "Inconsolata",
+      cssVariable: "--font-inconsolata",
+      weights: ["500"]
     },
   ],
 });

@@ -6,6 +6,17 @@
     --color-off-white: #efeee5;
     --color-off-black: #191609;
     --font-display: var(--font-gentium-book-plus);
-    --font-mono: var(--font-courier-prime);
+    --font-mono: var(--font-inconsolata);
     --breakpoint-2sm: 32rem;
+}
+
+.paragraph {
+    @apply
+        text-lg text-justify
+        mt-0 mb-0
+        indent-8;
+    :is(h1, h2, h3, h4, h5, h6) + & {
+        @apply
+            !indent-0;
+    }
 }

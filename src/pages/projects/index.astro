@@ -1,0 +1,127 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import MainView from "../../layouts/MainView.astro";
+import NavigationBar from "../../components/NavigationBar.astro";
+import Chapter from "../../components/writing/Chapter.astro";
+import Section from "../../components/writing/Section.astro";
+import Link from "../../components/writing/Link.astro";
+import Paragraph from "../../components/writing/Paragraph.astro";
+import AboutTopic from "../../components/writing/AboutTopic.astro"
+import InlineCode from "../../components/writing/InlineCode.astro"
+---
+
+<BaseLayout>
+    <div class="flex flex-inital justify-center">
+        <MainView>
+            <NavigationBar />
+            <Chapter>My Projects</Chapter>
+            <Paragraph>
+                Here I've listed many personal projects that I have worked on. Some
+                projects are larger than others. And some doesn't lead to fully working
+                "Applications".
+            </Paragraph>
+
+            <Section>Zinc, a Simple Image Processor</Section>
+            <AboutTopic>
+                Context, What it is, How to use it, Link.
+            </AboutTopic>
+            <Paragraph>
+                <i>Zinc</i> is one of the first project I worked on. It is a simple
+                program to manipulate/edit an image. The project is purely written in C.
+            </Paragraph>
+            <Paragraph>
+                Zinc was a naïve attempt on creating an image processor as this project is
+                quite broad and can be extended more and more to create a working
+                production-grade software. My attempt contains only a handful of features.
+                Such as: Grayscale Conversion, Brightness Adjustment, Tint, Color
+                Inversion and more...
+            </Paragraph>
+            <Paragraph>
+                The program only works inside the command line through arguments passed to
+                the program from the shell. The output image is written in the currently
+                working directory(cwd).
+            </Paragraph>
+            <Paragraph>
+                    Here is the project on Github:{" "}
+                    <Link
+                        url="https://github.com/mubin-thinks/zinc"
+                        anchorText="mubin-thinks/zinc"
+                        external
+                    />
+            </Paragraph>
+
+            <Section>OreoAdventures, a 2d Side Scrolling Game</Section>
+            <AboutTopic>
+                What it is, How it's played, Inspiration, Levels, Technical details, Link.
+            </AboutTopic>
+            <Paragraph>
+                <i>OreoAdventures</i> is a small video game with a level system & gradual
+                difficulty. The project was used to practice my Graphics Programming &
+                Coding skills.
+            </Paragraph>
+            <Paragraph>
+                The game is 2d and played only on a computer, The player is represented
+                as a flying entity whose task is to collect all coins in a given level to
+                unlock the door to the next level at the end. It must be done quick as
+                their is a time limit. If the player looses any level, he will restart at
+                Level 1.
+            </Paragraph>
+            <Paragraph>
+                The flying entity, Coins & Environment Textures are inspired by Flappy
+                Bird, Super Mario & Minecraft respectively.
+            </Paragraph>
+            <Paragraph>
+                Their are 5 levels in the game with gradual difficulty, length and time
+                limit. All levels imitate texture of the earth & the sky. Though much of
+                the textures can be pollished.
+            </Paragraph>
+            <Paragraph>
+                The game is written in C++ & OpenGL. The game was used to practice my
+                coding skills and thus the code-base isn't organized well nor does it
+                follow common coding-practices in terms of code structure.
+            </Paragraph>
+            <Paragraph>
+                The Levels of the game is represented as a text-grid saved in{" "}
+                <InlineCode>levels/</InlineCode> directory and loaded with{" "}
+                <Link
+                    url="https://en.wikipedia.org/wiki/Run-length_encoding"
+                    anchorText="RLE(Run Length Encoding)"
+                    external
+                /> to save some memory.
+            </Paragraph>
+            <Paragraph>
+                    Here is the project on Github:{" "}
+                    <Link
+                        url="https://github.com/mubin-thinks/oreoadventures"
+                        anchorText="mubin-thinks/oreoadventures"
+                        external
+                    />
+            </Paragraph>
+
+            <Section>
+                c-k-and-r-solutions, Solutions to The C Programming Language Book
+            </Section>
+            <AboutTopic>
+                What it is, How to use it, Link.
+            </AboutTopic>
+            <Paragraph>
+                This repository stores solutions of exercises in "The C Programming
+                Language by Brian Kernighan & Dennis Ritchie". Chapter 7 & 8 are in the
+                todos and the last 3 problems in chapter 5 is out of my reach. I shall try
+                to solve them later.
+            </Paragraph>
+            <Paragraph>
+                Instructions on how to run the solutions on a local machine is provided
+                in the Github Readme.
+            </Paragraph>
+            <Paragraph>
+                    Here is the project on Github:{" "}
+                    <Link
+                        url="https://github.com/mubin-thinks/c-k-and-r-solutions"
+                        anchorText="mubin-thinks/c-k-and-r-solutions"
+                        external
+                    />
+            </Paragraph>
+        </MainView>
+    </div>
+</BaseLayout>
